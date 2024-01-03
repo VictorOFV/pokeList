@@ -4,7 +4,7 @@ import pLimit from 'p-limit';
 const limit = pLimit(5);
 
 async function getPokemonList() {
-    const api = await fetch("https://pokeapi.co/api/v2/pokemon?limit=20");
+    const api = await fetch("https://pokeapi.co/api/v2/pokemon?limit=20000");
     const data = await api.json();
     return data.results;
 }
