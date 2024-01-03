@@ -1,0 +1,15 @@
+.loading {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    img {
+        width: 25rem;
+    }
+}

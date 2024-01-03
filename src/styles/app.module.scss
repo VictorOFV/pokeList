@@ -1,0 +1,28 @@
+.app {
+    padding: 1rem;
+
+    .pokemonContainer {
+        width: 25rem;
+        background-color: rgba(0, 0, 0, 0.173);
+        border-radius: 8px;
+        padding: .5rem 0;
+    }
+
+    .pokemonList {
+        overflow: auto;
+        height: 80vh;
+        padding: 1rem;
+
+        &::-webkit-scrollbar {
+            width: 5px;
+            background-color: #3d3d3d;
+            border-radius: 20px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #F8D444;
+            border-radius: 20px;
+            height: 25px;
+        }
+    }
+}

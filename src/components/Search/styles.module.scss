@@ -1,0 +1,33 @@
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #F8D444;
+    margin: 1rem;
+
+    input {
+        width: 100%;
+        height: 3rem;
+        font-size: 1rem;
+        background-color: transparent;
+        border: 2px solid transparent;
+        padding: 0 .5rem;
+        color: #fff;
+        outline: none;
+
+        &::-webkit-search-cancel-button {
+            background-image: url(../../assets/buttonCancel.png);
+            background-size: cover;
+            width: 20px;
+            height: 20px;
+            appearance: none;
+            cursor: pointer;
+        }
+    }
+
+    button {
+        border-radius: 0;
+        border-width: 0;
+        height: 3rem;
+    }
+}
