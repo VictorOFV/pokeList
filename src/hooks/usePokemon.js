@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import pLimit from 'p-limit';
 
-const limit = pLimit(5);
+const limit = pLimit(50);
 
 async function getPokemonList() {
-    const api = await fetch("https://pokeapi.co/api/v2/pokemon?limit=20000");
+    const api = await fetch("https://pokeapi.co/api/v2/pokemon?limit=2000");
     const data = await api.json();
     return data.results;
 }
@@ -26,18 +26,18 @@ async function getPokemonData(pokemon) {
 function usePokemon() {
     const [pokemons, setPokemons] = useState([]);
     const [loading, setLoading] = useState(true);
-    const constantList = useRef([])
+    const constantList = useRef([]);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const pokemonList = await getPokemonList();
-                const allData = await Promise.all(pokemonList.map(pokemon => limit(() => getPokemonData(pokemon))));
+                const allData = await Promise.all(pokemonList.map(pokemon => limit(() => getPokemonData(pokemon)))); // Executa todas as promisse de uma vez, respeitando o limite setado.
                 setPokemons(() => {
-                    const data = allData.filter(Boolean)
-                    constantList.current = data
+                    const data = allData.filter(Boolean) // Filtra valores nulos se ocorrer um erro
+                    constantList.current = data // Adiciona a lista contante em memoria
                     return data
-                }); // Filtra valores nulos se ocorrer um erro e adiciona a lista 
+                }); 
                 setLoading(false)
             } catch (error) {
                 console.warn("Um erro inesperado aconteceu!");

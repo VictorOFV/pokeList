@@ -1,0 +1,42 @@
+.footer {
+    background-color: #356ABC;
+    padding: 1rem;
+
+    .footerContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    
+        hr {
+            width: 30rem;
+        }
+
+        p {
+            font-family: 'Sora';
+            padding: .5rem;
+
+            a {
+                color: #F8D444;
+            }
+        }
+    }
+
+    .icons {
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        padding: .5rem;
+        
+        a {
+            color: #fff;
+            transition: .4s;
+    
+            &:hover {
+                color: #F8D444;
+            }
+        }
+    
+    }
+}

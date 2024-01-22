@@ -1,0 +1,40 @@
+.cardContainer * {
+    font-family: 'Sora', sans-serif;
+}
+
+.cardContainer {
+    background-color: #F29706;
+    width: 28rem;
+    height: 45rem;
+    padding: 1rem;
+    border: 2px solid #000;
+}
+
+.card {
+    background-color: #252525;
+    height: 100%;
+    border-radius: 8px;
+    padding: .5rem 1rem;
+}
+
+.info {
+    display: grid;
+    gap: .7rem;
+    margin-top: 1rem;
+    width: 100%;
+
+    h3 {
+        font-size: 1.35rem;
+        margin-bottom: .2rem;
+    }
+
+    hr {
+        width: 100%;
+    }
+}
+
+.sideInfo {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}

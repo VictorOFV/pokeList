@@ -1,0 +1,57 @@
+.topCard {
+    display: flex;
+    align-items: center;
+
+    h2 {
+        text-transform: capitalize;
+        font-family: 'Raleway', sans-serif;
+        max-width: 11rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 1.8rem;
+        font-weight: 500;
+        position: relative;
+        right: 15px;
+        white-space: nowrap
+    }
+
+    p {
+        font-weight: 600;
+        font-family: 'Sora', sans-serif;
+
+        span {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.type {
+    position: relative;
+    right: 25px;
+    bottom: 2px;
+    background-color: #fff;
+    padding: .2rem;
+    transform: skewX(-20deg);
+    border-radius: 5px;
+
+    span {
+        color: #000;
+        font-size: .8rem;
+        font-weight: 600;
+    }
+}
+
+.cardData {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.xp {
+    display: flex;
+    gap: .3rem;
+
+    img {
+        height: 2rem;
+    }
+}

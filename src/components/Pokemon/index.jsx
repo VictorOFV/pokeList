@@ -1,16 +1,19 @@
 import styles from "./styles.module.scss"
-import noImage from "../../assets/noImagePokemon.png"
+import noImage from "../../assets/noImagePokemonRevert.png"
+import useBadgesPokemon from "../../hooks/useBadgesPokemon"
 
-function Pokemon({ name, image, func }) {
+function Pokemon({ name, image, func, data }) {
 
-    if(!image) {
+    // const { badges } = useBadgesPokemon(data) 
+
+    if (!image) {
         image = noImage
     }
 
     return (
-        <li className={styles.pokemon} onClick={func}>
+        <li className={styles.pokemon} onClick={func} >
             <img src={image} alt={name} />
-            <hr/>
+            <hr style={{backgroundColor: "#fff"}}/>
             <h3>{name}</h3>
         </li>
     )

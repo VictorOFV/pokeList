@@ -1,21 +1,19 @@
 import Button from "../Button"
 import styles from "./styles.module.scss"
 
-function Search({ search, setSearch, func }) {
+function Search({ search, setSearch, searchPokemon }) {
     const handleSubmit = (ev) => {
         ev.preventDefault()
-        func()
+        searchPokemon()
     }
 
     return (
         <form onSubmit={handleSubmit} className={styles.search}>
             <input
-                placeholder="Pesquise seu Pokemon..."
+                placeholder="Digite o nome do seu Pokémon..."
                 type="search"
                 value={search}
-                onChange={(ev) => setSearch(() => {
-                    return ev.target.value
-                })}
+                onChange={(ev) => setSearch(ev.target.value)}
             />
             <Button text={"Pesquisar"} type="submit" />
         </form>
